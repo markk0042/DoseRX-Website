@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en-IE">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="DoseRX — medication & controlled drug control for Irish EMS. HSE-aligned security: RLS, hashed logins, encryption, dual-PIN witnessing. Clinical detail stays in ePCR." />
+  <title>DoseRX — Medication & Controlled Drug Control for Irish EMS</title>
+  <link rel="icon" type="image/png" href="assets/doserx-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav" id="nav">
+    <a class="nav-brand" href="#top" aria-label="DoseRX home">
+      <img src="assets/doserx-logo.png" alt="" width="36" height="36" />
+      <span>DoseRX</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#architecture">Architecture</a>
+      <a href="#security">Security</a>
+      <a href="#product">Product</a>
+      <a href="#features">Features</a>
+      <a href="#partners">Partners</a>
+    </nav>
+    <a class="nav-cta" href="#contact">Request a demo</a>
+    <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <a href="#architecture">Architecture</a>
+    <a href="#security">Security</a>
+    <a href="#product">Product</a>
+    <a href="#features">Features</a>
+    <a href="#partners">Partners</a>
+    <a href="#contact">Contact</a>
+    <a class="nav-cta" href="#contact">Request a demo</a>
+  </div>
+
+  <main id="main">
+    <!-- HERO: full-bleed product plane -->
+    <section class="hero" id="top">
+      <div class="hero-media" aria-hidden="true">
+        <img
+          src="assets/doserx-leaflet-devices.png"
+          alt=""
+          width="1536"
+          height="1024"
+          fetchpriority="high"
+          class="hero-bg"
+        />
+        <div class="hero-shade"></div>
+      </div>
+
+      <div class="hero-content">
+        <p class="brand-lockup reveal">
+          <img src="assets/doserx-logo.png" alt="" width="72" height="72" />
+          <span>DoseRX</span>
+        </p>
+        <h1 class="reveal reveal-2">Medication control for Irish EMS</h1>
+        <p class="hero-lede reveal reveal-3">
+          PHECC-aligned bags, dual-witness controlled drugs, and inspection-ready registers — built for the field.
+        </p>
+        <div class="hero-actions reveal reveal-4">
+          <a class="btn btn-primary" href="#product">See the product</a>
+          <a class="btn btn-ghost" href="#contact">Book a demo</a>
+        </div>
+      </div>
+
+      <div class="hero-partners reveal reveal-5">
+        <span>In partnership with</span>
+        <a href="https://www.medcare247.co.uk" target="_blank" rel="noopener noreferrer">
+          <img src="assets/medcare247-logo.svg" alt="" width="28" height="28" />
+          MedCare247
+        </a>
+        <a href="https://thetechteam.ie" target="_blank" rel="noopener noreferrer">
+          <img src="assets/thetechteam-favicon.svg" alt="" width="28" height="28" />
+          The Tech Team
+        </a>
+      </div>
+    </section>
+
+    <!-- PITCH -->
+    <section class="section pitch" id="why">
+      <div class="wrap">
+        <p class="eyebrow reveal">Built for Ireland</p>
+        <h2 class="display-lg reveal">
+          Replace paper registers with field-ready medicine control.
+        </h2>
+        <div class="pitch-rail">
+          <article class="pitch-item reveal">
+            <span class="pitch-num">01</span>
+            <h3>PHECC-native</h3>
+            <p>Dose, route, and indication locked to EMT / Paramedic / AP grade and the 2026 CPG formulary.</p>
+          </article>
+          <article class="pitch-item reveal">
+            <span class="pitch-num">02</span>
+            <h3>Offline-first</h3>
+            <p>Full bag and CD actions with no signal — queue and sync when coverage returns.</p>
+          </article>
+          <article class="pitch-item reveal">
+            <span class="pitch-num">03</span>
+            <h3>Inspection-ready</h3>
+            <p>CD registers, analytics packs, GPS, and photo evidence on every critical movement.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARCHITECTURE -->
+    <section class="section architecture" id="architecture">
+      <div class="wrap">
+        <div class="arch-intro reveal">
+          <p class="eyebrow">Designed for CAD &amp; ePCR</p>
+          <h2 class="display-md">Clinical detail stays in ePCR.<br />DoseRX stays the ledger.</h2>
+          <p class="lead">
+            Identifiable clinical information lives in the electronic Patient Care Report. DoseRX is the accountability ledger for medicines — linked by a join key, never by duplicating the patient record.
+          </p>
+        </div>
+
+        <div class="arch-diagram reveal" aria-label="How DoseRX joins to ePCR">
+          <div class="arch-pane">
+            <span class="arch-kicker">CAD / clinical</span>
+            <strong>ePCR</strong>
+            <p>Identifiable clinical detail — patient story, assessment, treatment narrative.</p>
+          </div>
+          <div class="arch-bridge" aria-hidden="true">
+            <span class="arch-dot"></span>
+            <span class="arch-key">Join key</span>
+            <span class="arch-dot"></span>
+          </div>
+          <div class="arch-pane arch-pane-dose">
+            <span class="arch-kicker">Medicines control</span>
+            <strong>DoseRX ledger</strong>
+            <p>Who moved what, when, with whom, under which seal — audit evidence only.</p>
+          </div>
+        </div>
+
+        <div class="arch-lines">
+          <p class="reveal"><em>No shadow patient file.</em> ePCR remains the system of clinical truth.</p>
+          <p class="reveal"><em>Traceable when needed.</em> A join key ties a drug event to the correct ePCR.</p>
+          <p class="reveal"><em>Cleaner compliance.</em> Medicine accountability for HPRA; clinical governance stays with CAD.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECURITY -->
+    <section class="section security" id="security">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="eyebrow">Security &amp; access control</p>
+          <h2 class="display-md">Built to align with HSE information security expectations</h2>
+          <p class="lead">
+            DoseRX is engineered around confidentiality, integrity and availability — the controls HSE IT Security and Data Protection policies require for systems that process health-service information.
+          </p>
+        </header>
+
+        <div class="sec-grid">
+          <article class="sec-item reveal">
+            <h3>Authenticated user logins</h3>
+            <p>
+              Every practitioner and manager signs in with an individual account. No shared credentials. Access is role-scoped (clinical staff vs management) so people only see what their duty requires — matching HSE access-control and least-privilege expectations.
+            </p>
+          </article>
+          <article class="sec-item reveal">
+            <h3>Hashed credentials</h3>
+            <p>
+              Login secrets (PINs / passwords) are stored using strong, salted cryptographic hashing — never as plain text. Verification compares hashes only, in line with HSE password-security practice and GDPR integrity requirements.
+            </p>
+          </article>
+          <article class="sec-item reveal">
+            <h3>Row Level Security (RLS)</h3>
+            <p>
+              Database Row Level Security policies enforce organisation and role boundaries at query time. Even if a request is malformed, the data layer refuses rows the user is not authorised to read or change.
+            </p>
+          </article>
+          <article class="sec-item reveal">
+            <h3>Encryption in transit &amp; at rest</h3>
+            <p>
+              Traffic is protected with modern TLS. Stored data is encrypted at rest — supporting HSE Encryption Policy expectations for systems that hold operational and accountability records.
+            </p>
+          </article>
+          <article class="sec-item reveal">
+            <h3>Dual-control on controlled drugs</h3>
+            <p>
+              High-risk CD actions require a second authenticated witness PIN. That separation of duties strengthens accountability and reduces single-user diversion risk.
+            </p>
+          </article>
+          <article class="sec-item reveal">
+            <h3>Full activity audit trail</h3>
+            <p>
+              Sign-ins, bag movements, administrations, waste, and discrepancy actions are logged with actor, witness, time, and optional GPS / photo evidence — supporting monitoring, investigation, and inspection readiness.
+            </p>
+          </article>
+        </div>
+
+        <div class="sec-policy reveal">
+          <p class="sec-policy-label">Policy alignment</p>
+          <p>
+            DoseRX security design maps to the themes in HSE’s
+            <a href="https://pprdassets.hse.ie/media/documents/Information_Security_Policy.pdf" target="_blank" rel="noopener noreferrer">IT Security Policy</a>
+            (access control, password standards, encryption, monitoring), the
+            <a href="https://assets.hse.ie/media/documents/ncr/hse-data-protection-policy.pdf" target="_blank" rel="noopener noreferrer">Personal Data Protection Policy</a>
+            (data minimisation, privacy by design, integrity &amp; confidentiality), and the direction set in the
+            <a href="https://healthservice.hse.ie/documents/5087/HSE_Cyber_Statement_of_Strategic_Intent_2024-2027.pdf" target="_blank" rel="noopener noreferrer">Cyber Security Statement of Strategic Intent 2024–2027</a>
+            — including GDPR-aligned processing and identity / access safeguards. Identifiable clinical detail stays in ePCR; DoseRX holds the medicines ledger only.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT SHOWCASE — natural aspect images -->
+    <section class="section product" id="product">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="eyebrow">One system · every device</p>
+          <h2 class="display-md">Phone in the truck. Tablet at control. Laptop for oversight.</h2>
+        </header>
+      </div>
+
+      <figure class="shot shot-wide reveal">
+        <img
+          src="assets/doserx-leaflet-devices.png"
+          alt="DoseRX across phone, tablet, and laptop"
+          width="1536"
+          height="1024"
+          loading="lazy"
+        />
+        <figcaption>
+          <span>Fleet view</span>
+          DoseRX on every screen your service already uses — no special hardware.
+        </figcaption>
+      </figure>
+
+      <div class="shot-split">
+        <figure class="shot shot-portrait reveal">
+          <img
+            src="assets/doserx-leaflet-mobile.png"
+            alt="DoseRX mobile — QR scan and bag workflows"
+            width="1024"
+            height="1536"
+            loading="lazy"
+          />
+          <figcaption>
+            <span>Mobile</span>
+            QR scan · bag sign-out · photo evidence · administer / waste
+          </figcaption>
+        </figure>
+        <div class="shot-stack">
+          <figure class="shot reveal">
+            <img
+              src="assets/doserx-leaflet-tablet.png"
+              alt="DoseRX tablet — inventory and bag fleet"
+              width="1536"
+              height="1024"
+              loading="lazy"
+            />
+            <figcaption>
+              <span>Tablet</span>
+              Ampoule stock · bag fleet · audits
+            </figcaption>
+          </figure>
+          <figure class="shot reveal">
+            <img
+              src="assets/doserx-leaflet-laptop.png"
+              alt="DoseRX laptop — analytics and live map"
+              width="1536"
+              height="1024"
+              loading="lazy"
+            />
+            <figcaption>
+              <span>Laptop</span>
+              Analytics · live bag map · HPRA packs
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section features" id="features">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="eyebrow">Capabilities</p>
+          <h2 class="display-md">Built for how Irish crews actually work</h2>
+        </header>
+
+        <div class="feature-list">
+          <article class="feature-row reveal">
+            <h3>QR bag &amp; vial scanning</h3>
+            <p>Shift sign-out and return with bag QR; scan vials to administer with batch and expiry context.</p>
+          </article>
+          <article class="feature-row reveal">
+            <h3>Controlled drugs register</h3>
+            <p>Witness sign-out, part-dose accounting for Morphine &amp; Fentanyl, printable CD register PDFs.</p>
+          </article>
+          <article class="feature-row reveal">
+            <h3>ePCR join key</h3>
+            <p>Link drug events to the CAD ePCR without copying identifiable clinical detail into the medicines ledger.</p>
+          </article>
+          <article class="feature-row reveal">
+            <h3>HSE-aligned access security</h3>
+            <p>Individual logins, hashed credentials, Row Level Security, encryption, and dual-PIN witnessing on controlled-drug actions.</p>
+          </article>
+          <article class="feature-row reveal">
+            <h3>Dual-PIN witnessing</h3>
+            <p>Two-person verification on CD movements, waste, and critical bag actions — no silent overwrites.</p>
+          </article>
+          <article class="feature-row reveal">
+            <h3>Seal &amp; photo evidence</h3>
+            <p>Green / red / untagged capture with required seal photos on sign-out and return.</p>
+          </article>
+          <article class="feature-row reveal">
+            <h3>Live bag map</h3>
+            <p>Management view of on-shift bags with last-known GPS — accountability without chasing paper.</p>
+          </article>
+          <article class="feature-row reveal">
+            <h3>Analytics &amp; compliance</h3>
+            <p>Period analytics PDFs, activity log with grade context, and a compliance score from audits and witness rates.</p>
+          </article>
+          <article class="feature-row reveal">
+            <h3>Discrepancy workflow</h3>
+            <p>Report → investigate → resolve with a full audit trail for stock mismatches and seal breaks.</p>
+          </article>
+          <article class="feature-row reveal">
+            <h3>Event packs &amp; sandbox</h3>
+            <p>Time-boxed multi-agency festival packs, plus training mode on fake stock that mirrors the live UI.</p>
+          </article>
+          <article class="feature-row reveal">
+            <h3>Labels, expiry &amp; formulary</h3>
+            <p>Printable bag and medication QR labels, short-dated stock warnings, and full PHECC formulary by grade.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- BAGS + WHO -->
+    <section class="section bags" id="bags">
+      <div class="wrap bags-grid">
+        <div class="reveal">
+          <p class="eyebrow">Bag models</p>
+          <h2 class="display-sm">EMT to Advanced Paramedic — including CDs</h2>
+          <ul class="bag-list">
+            <li><code>DRX-EMT</code> EMT standard bags</li>
+            <li><code>DRX-P</code> Paramedic standard bags</li>
+            <li><code>DRX-AP</code> Advanced Paramedic standard bags</li>
+            <li class="is-cd"><code>DRX-CD-P</code> Paramedic CDs — Midazolam</li>
+            <li class="is-cd"><code>DRX-CD-AP</code> AP CDs — Morphine, Fentanyl, Ketamine, Midazolam, Diazepam, Lorazepam</li>
+          </ul>
+        </div>
+        <div class="who-panel reveal">
+          <p class="eyebrow light">Who it’s for</p>
+          <h2 class="display-sm light">Services that can’t afford register gaps</h2>
+          <ul class="who-list">
+            <li>Private &amp; statutory ambulance services</li>
+            <li>Event and festival medical providers</li>
+            <li>Multi-agency deployments</li>
+            <li>Training centres &amp; CD accountable officers</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARTNERS -->
+    <section class="section partners" id="partners">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="eyebrow">Partnership</p>
+          <h2 class="display-md">Delivered with operators who know EMS</h2>
+        </header>
+
+        <div class="partner-row">
+          <a class="partner reveal" href="https://www.medcare247.co.uk" target="_blank" rel="noopener noreferrer">
+            <img src="assets/medcare247-logo.svg" alt="MedCare247 logo" width="64" height="64" />
+            <div>
+              <h3>MedCare247</h3>
+              <p class="partner-role">Private Ambulance &amp; Events Specialist</p>
+              <p>Operational partner — private ambulance and event medical expertise so DoseRX fits road and site workflows.</p>
+              <span class="text-link">medcare247.co.uk</span>
+            </div>
+          </a>
+          <a class="partner reveal" href="https://thetechteam.ie" target="_blank" rel="noopener noreferrer">
+            <img src="assets/thetechteam-favicon.svg" alt="The Tech Team logo" width="64" height="64" />
+            <div>
+              <h3>The Tech Team</h3>
+              <p class="partner-role">Irish full-stack studio · Rathcoole, Dublin</p>
+              <p>Technology partner — building, hosting, and supporting DoseRX for Irish emergency services.</p>
+              <span class="text-link">thetechteam.ie</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <div class="contact-stage reveal">
+        <p class="eyebrow light">Get started</p>
+        <h2 class="display-lg light">Ready to modernise your medicine control?</h2>
+        <p class="lead light">
+          Tell us about your service — we’ll arrange a demo covering bag setup, CD workflows, and reporting.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://thetechteam.ie#contact" target="_blank" rel="noopener noreferrer">Contact The Tech Team</a>
+          <a class="btn btn-ghost" href="https://www.medcare247.co.uk" target="_blank" rel="noopener noreferrer">Speak with MedCare247</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <img src="assets/doserx-logo.png" alt="" width="44" height="44" />
+        <div>
+          <strong>DoseRX</strong>
+          <p>Medication &amp; controlled drug control for Irish EMS</p>
+        </div>
+      </div>
+      <div class="footer-partners">
+        <p>In partnership with</p>
+        <div class="footer-partner-row">
+          <a href="https://www.medcare247.co.uk" target="_blank" rel="noopener noreferrer">
+            <img src="assets/medcare247-logo.svg" alt="" width="28" height="28" />
+            MedCare247
+          </a>
+          <a href="https://thetechteam.ie" target="_blank" rel="noopener noreferrer">
+            <img src="assets/thetechteam-favicon.svg" alt="" width="28" height="28" />
+            The Tech Team
+          </a>
+        </div>
+      </div>
+      <p class="footer-copy">© <span id="year"></span> DoseRX · PHECC CPG 2026 Edition</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
