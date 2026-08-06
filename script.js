@@ -26,7 +26,8 @@
 
   const onScroll = () => {
     const y = window.scrollY
-    nav?.classList.toggle('solid', y > 40)
+    const forceSolid = document.body.classList.contains('page-policies')
+    nav?.classList.toggle('solid', forceSolid || y > 40)
 
     if (!reduceMotion && heroBg) {
       const shift = Math.min(y * 0.18, 70)

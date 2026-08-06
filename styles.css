@@ -180,6 +180,11 @@ ul {
   color: var(--sea);
 }
 
+.nav.solid .nav-links a[aria-current="page"] {
+  color: var(--sea-mid);
+  font-weight: 700;
+}
+
 .nav.solid .burger span {
   background: var(--sea);
 }
@@ -902,6 +907,14 @@ ul {
 .nav-links a[aria-current="page"],
 .mobile-menu a[aria-current="page"] {
   color: var(--amber-hot);
+}
+
+.nav.solid .nav-links a[aria-current="page"] {
+  color: var(--sea-mid);
+}
+
+.mobile-menu a[aria-current="page"] {
+  color: var(--sea-mid);
 }
 
 /* ─── PRODUCT SHOTS — never distort ─── */
