@@ -1111,6 +1111,58 @@ ul {
   margin-bottom: 1.75rem;
 }
 
+.contact-emails {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.contact-emails-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--amber-soft);
+  margin-bottom: 0.85rem;
+}
+
+.contact-email-list {
+  display: grid;
+  gap: 0.65rem;
+}
+
+@media (min-width: 700px) {
+  .contact-email-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}
+
+.contact-email-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.contact-email-list span {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(220, 238, 234, 0.7);
+}
+
+.contact-email-list a {
+  font-family: var(--display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #fff;
+  transition: color 0.2s;
+}
+
+.contact-email-list a:hover {
+  color: var(--amber-hot);
+}
+
 /* ─── FOOTER ─── */
 .footer {
   padding: 3rem 0 2.25rem;
@@ -1150,7 +1202,8 @@ ul {
 
 .footer-partners > p,
 .footer-apps > p,
-.footer-social > p {
+.footer-social > p,
+.footer-emails > p {
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.12em;
