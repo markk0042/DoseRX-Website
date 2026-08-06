@@ -129,10 +129,7 @@
       }
 
       form.reset()
-      showStatus(
-        'Message sent. If this is your first submission, check the inbox for an activation email from FormSubmit and confirm it — then messages will arrive normally.',
-        true,
-      )
+      showStatus('Message sent. We’ll get back to you soon.', true)
     } catch (err) {
       showStatus(
         err?.message || 'Something went wrong. Please email contact@doserx.ie directly.',
