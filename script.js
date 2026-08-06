@@ -64,17 +64,14 @@
   const routes = {
     general: {
       to: 'contact@doserx.ie',
-      cc: 'support@doserx.ie,devteam@doserx.ie',
       subject: 'DoseRX website enquiry — General',
     },
     support: {
       to: 'support@doserx.ie',
-      cc: 'contact@doserx.ie',
       subject: 'DoseRX website enquiry — Support',
     },
     development: {
       to: 'devteam@doserx.ie',
-      cc: 'contact@doserx.ie',
       subject: 'DoseRX website enquiry — Development',
     },
   }
@@ -107,7 +104,6 @@
       topic: topic?.selectedOptions?.[0]?.text || topic?.value,
       message: form.message.value.trim(),
       _subject: route.subject,
-      _cc: route.cc,
       _template: 'table',
       _replyto: form.email.value.trim(),
     }
