@@ -1303,6 +1303,23 @@ ul {
   letter-spacing: 0.14em;
 }
 
+.footer-email-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.footer-email-row a {
+  font-weight: 600;
+  color: var(--sea);
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.footer-email-row a:hover {
+  color: var(--sea-mid);
+}
+
 .footer-copy {
   font-size: 0.85rem;
   color: var(--muted);
@@ -1322,7 +1339,7 @@ ul {
 
 @media (min-width: 980px) {
   .footer-grid {
-    grid-template-columns: 1.4fr 1fr 1fr 0.8fr;
+    grid-template-columns: 1.3fr 1fr 1fr 0.9fr 0.9fr;
     align-items: start;
   }
 
