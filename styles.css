@@ -1108,13 +1108,129 @@ ul {
 }
 
 .contact-stage .lead {
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-layout {
+  display: grid;
+  gap: clamp(2rem, 5vw, 3rem);
+}
+
+@media (min-width: 900px) {
+  .contact-layout {
+    grid-template-columns: 1fr 1.05fr;
+    align-items: start;
+    gap: 3rem;
+  }
+}
+
+.contact-form {
+  display: grid;
+  gap: 0.95rem;
+  padding: 1.35rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 4px;
+}
+
+.form-row {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.form-row label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(220, 238, 234, 0.78);
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(6, 40, 50, 0.55);
+  color: #fff;
+  border-radius: 4px;
+  padding: 0.8rem 0.9rem;
+  font: inherit;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-row input::placeholder,
+.form-row textarea::placeholder {
+  color: rgba(220, 238, 234, 0.45);
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+  border-color: var(--amber);
+  box-shadow: 0 0 0 3px rgba(240, 168, 24, 0.2);
+}
+
+.form-row select {
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, #fff 50%),
+    linear-gradient(135deg, #fff 50%, transparent 50%);
+  background-position: calc(100% - 18px) calc(50% - 3px), calc(100% - 12px) calc(50% - 3px);
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+}
+
+.form-row textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form .btn {
+  justify-self: start;
+  margin-top: 0.25rem;
+}
+
+.contact-form .btn:disabled {
+  opacity: 0.65;
+  cursor: wait;
+  transform: none;
+}
+
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  pointer-events: none;
+}
+
+.form-status {
+  font-size: 0.95rem;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.form-status.is-ok {
+  color: #b8f0d4;
+}
+
+.form-status.is-err {
+  color: #ffc9c0;
 }
 
 .contact-emails {
   margin-top: 2rem;
   padding-top: 1.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+@media (min-width: 900px) {
+  .contact-email-list {
+    grid-template-columns: 1fr;
+  }
 }
 
 .contact-emails-label {

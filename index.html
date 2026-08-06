@@ -403,30 +403,71 @@
     <!-- CONTACT -->
     <section class="section contact" id="contact">
       <div class="contact-stage reveal">
-        <p class="eyebrow light">Get started</p>
-        <h2 class="display-lg light">Ready to modernise your medicine control?</h2>
-        <p class="lead light">
-          Tell us about your service — we’ll arrange a demo covering bag setup, CD workflows, and reporting.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="https://dose-rx-one.vercel.app" target="_blank" rel="noopener noreferrer">Try demo</a>
-        </div>
-        <div class="contact-emails">
-          <p class="contact-emails-label">Email us</p>
-          <ul class="contact-email-list">
-            <li>
-              <span>General</span>
-              <a href="mailto:contact@doserx.ie">contact@doserx.ie</a>
-            </li>
-            <li>
-              <span>Support</span>
-              <a href="mailto:support@doserx.ie">support@doserx.ie</a>
-            </li>
-            <li>
-              <span>Development</span>
-              <a href="mailto:devteam@doserx.ie">devteam@doserx.ie</a>
-            </li>
-          </ul>
+        <div class="contact-layout">
+          <div class="contact-intro">
+            <p class="eyebrow light">Get started</p>
+            <h2 class="display-lg light">Ready to modernise your medicine control?</h2>
+            <p class="lead light">
+              Send a message below — it goes to our DoseRX inboxes. Or try the live demo first.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="https://dose-rx-one.vercel.app" target="_blank" rel="noopener noreferrer">Try demo</a>
+            </div>
+            <div class="contact-emails">
+              <p class="contact-emails-label">Direct email</p>
+              <ul class="contact-email-list">
+                <li>
+                  <span>General</span>
+                  <a href="mailto:contact@doserx.ie">contact@doserx.ie</a>
+                </li>
+                <li>
+                  <span>Support</span>
+                  <a href="mailto:support@doserx.ie">support@doserx.ie</a>
+                </li>
+                <li>
+                  <span>Development</span>
+                  <a href="mailto:devteam@doserx.ie">devteam@doserx.ie</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contact-form" novalidate>
+            <input type="hidden" name="_subject" id="form-subject" value="DoseRX website enquiry" />
+            <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+            <div class="form-row">
+              <label for="contact-name">Full name</label>
+              <input id="contact-name" name="name" type="text" required autocomplete="name" placeholder="Your name" />
+            </div>
+
+            <div class="form-row">
+              <label for="contact-email">Email</label>
+              <input id="contact-email" name="email" type="email" required autocomplete="email" placeholder="you@organisation.ie" />
+            </div>
+
+            <div class="form-row">
+              <label for="contact-org">Organisation</label>
+              <input id="contact-org" name="organisation" type="text" autocomplete="organization" placeholder="Service or company name" />
+            </div>
+
+            <div class="form-row">
+              <label for="contact-topic">Send to</label>
+              <select id="contact-topic" name="topic" required>
+                <option value="general">General — contact@doserx.ie</option>
+                <option value="support">Support — support@doserx.ie</option>
+                <option value="development">Development — devteam@doserx.ie</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" name="message" rows="5" required placeholder="Tell us what you need…"></textarea>
+            </div>
+
+            <button class="btn btn-primary" type="submit" id="contact-submit">Send message</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite" hidden></p>
+          </form>
         </div>
       </div>
     </section>
