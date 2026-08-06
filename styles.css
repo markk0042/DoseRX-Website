@@ -857,6 +857,53 @@ ul {
   color: var(--muted);
 }
 
+/* ─── POLICIES PAGE ─── */
+.page-policies {
+  background:
+    radial-gradient(ellipse at 20% 0%, #d7ebe6 0%, transparent 50%),
+    linear-gradient(180deg, #e8f1ef 0%, var(--paper) 42%, var(--paper) 100%);
+}
+
+.policies-page {
+  padding-top: clamp(6.5rem, 12vw, 8rem);
+  padding-bottom: clamp(3.5rem, 8vw, 5.5rem);
+  min-height: 60vh;
+}
+
+.policies-page-inner {
+  max-width: 40rem;
+}
+
+.policies-page-head {
+  margin-bottom: 1.75rem;
+}
+
+.policies-brand {
+  margin-bottom: 1.1rem;
+  color: var(--sea);
+  font-size: clamp(2.2rem, 6vw, 3.2rem);
+}
+
+.policies-brand img {
+  width: 56px;
+  height: 56px;
+  box-shadow: 0 8px 24px rgba(11, 58, 74, 0.18);
+}
+
+.policies-page-head .lead {
+  margin-top: 0.65rem;
+  max-width: 34rem;
+}
+
+.policies-docs {
+  margin-top: 0;
+}
+
+.nav-links a[aria-current="page"],
+.mobile-menu a[aria-current="page"] {
+  color: var(--amber-hot);
+}
+
 /* ─── PRODUCT SHOTS — never distort ─── */
 .product {
   padding-bottom: clamp(3rem, 6vw, 4.5rem);
@@ -932,94 +979,13 @@ ul {
   margin: 0 auto;
 }
 
-.shot-phones {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(0.85rem, 2.5vw, 1.35rem);
-  align-items: start;
-  justify-items: center;
-}
-
-.phone-device {
-  margin: 0;
-  width: 100%;
-  max-width: 220px;
-}
-
-.phone-shell {
-  margin: 0 auto;
-  padding: 0.55rem;
-  background: linear-gradient(160deg, #1a2e36 0%, #0a1a22 55%, #142830 100%);
-  border-radius: 1.65rem;
-  box-shadow:
-    0 18px 40px rgba(10, 31, 40, 0.22),
-    0 0 0 1px rgba(255, 255, 255, 0.08) inset;
-}
-
-.phone-bezel {
-  position: relative;
-  overflow: hidden;
-  border-radius: 1.2rem;
-  background: #0a1f28;
-  aspect-ratio: 470 / 1024;
-}
-
-.phone-bezel img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  background: none;
-}
-
-.phone-device figcaption {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-  padding: 0.85rem 0.15rem 0;
-  font-size: 0.9rem;
-  color: var(--muted);
-  text-align: center;
-}
-
-.phone-device figcaption span {
-  font-family: var(--display);
-  font-weight: 700;
-  font-size: 0.95rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--sea);
-}
-
-@media (max-width: 520px) {
-  .shot-phones {
-    grid-template-columns: 1fr 1fr;
-    gap: 0.65rem;
-  }
-
-  .phone-device {
-    max-width: none;
-  }
-
-  .phone-shell {
-    padding: 0.4rem;
-    border-radius: 1.25rem;
-  }
-
-  .phone-bezel {
-    border-radius: 0.95rem;
-  }
-}
-
 .shot-stack {
   display: grid;
   gap: clamp(1.5rem, 4vw, 2.25rem);
 }
 
 .shot-portrait figcaption,
-.shot-stack .shot figcaption,
-.phone-device figcaption {
+.shot-stack .shot figcaption {
   padding-left: 0;
   padding-right: 0;
 }
