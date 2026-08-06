@@ -802,6 +802,55 @@ ul {
   color: var(--amber-hot);
 }
 
+.sec-docs {
+  margin-top: 1.25rem;
+  padding: 1.35rem 1.4rem;
+  background: var(--mint);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+
+.sec-docs-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sea-mid);
+  margin-bottom: 0.75rem;
+}
+
+.doc-link {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1.25rem;
+  padding: 0.85rem 1rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  transition: border-color 0.2s, transform 0.2s var(--ease);
+}
+
+.doc-link:hover {
+  border-color: var(--sea-mid);
+  transform: translateY(-1px);
+}
+
+.doc-link-title {
+  font-family: var(--display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--sea);
+}
+
+.doc-link-meta {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
 /* ─── PRODUCT SHOTS — never distort ─── */
 .product {
   padding-bottom: clamp(3rem, 6vw, 4.5rem);
@@ -1319,7 +1368,8 @@ ul {
 .footer-partners > p,
 .footer-apps > p,
 .footer-social > p,
-.footer-emails > p {
+.footer-emails > p,
+.footer-docs > p {
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.12em;
